@@ -1,0 +1,195 @@
+<!-- Build a Technical Documentation Page
+
+Objective: Build an app that is functionally similar to https://technical-documentation-page.freecodecamp.rocks
+
+User Stories:
+
+    -1.You can see a main element with a corresponding id="main-doc", which contains the page's main content (technical documentation)
+    -2.Within the #main-doc element, you can see several section elements, each with a class of main-section. There should be a minimum of five
+    -3.The first element within each .main-section should be a header element, which contains text that describes the topic of that section.
+    -4.Each section element with the class of main-section should also have an id that corresponds with the text of each header contained within it. Any spaces should be replaced with underscores (e.g. The section that contains the header "JavaScript and Java" should have a corresponding id="JavaScript_and_Java")
+    5.The .main-section elements should contain at least ten p elements total (not each)
+    6.The .main-section elements should contain at least five code elements total (not each)
+    7.The .main-section elements should contain at least five li items total (not each)
+    8.You can see a nav element with a corresponding id="navbar"
+    9.The navbar element should contain one header element which contains text that describes the topic of the technical documentation
+    10.Additionally, the navbar should contain link (a) elements with the class of nav-link. There should be one for every element with the class main-section
+    11.The header element in the #navbar must come before any link (a) elements in the navbar
+    12.Each element with the class of nav-link should contain text that corresponds to the header text within each section (e.g. if you have a "Hello world" section/header, your navbar should have an element which contains the text "Hello world")
+    13.When you click on a navbar element, the page should navigate to the corresponding section of the #main-doc element (e.g. If you click on a .nav-link element that contains the text "Hello world", the page navigates to a section element with that id, and contains the corresponding header)
+    14.On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user
+    15.Your technical documentation should use at least one media query
+
+Fulfill the user stories and pass all the tests below to complete this project. Give it your own personal style. Happy Coding!
+
+Note: Be sure to add <link rel="stylesheet" href="styles.css"> in your HTML to link your stylesheet and apply your CSS
+ -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Technical Documentation Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css"> 
+    </head>
+    <body>
+        <nav id="navbar">
+            <header>Technical Documentation</header>
+            <ul>
+                <li><a class="nav-link" href="#Introduction_to_Responsive_Web_Design">Introduction to Responsive Web Design</a></li>
+                <li><a class="nav-link" href="#Key_Principles_of_Responsive_Design">Key Principles of Responsive Design</a></li>
+                <li><a class="nav-link" href="#Using_a_Grid_System_for_Layout">Using a Grid System for Layout</a></li>
+                <li><a class="nav-link" href="#Media_Queries_and_Breakpoints">Media Queries and Breakpoints</a></li>
+                <li><a class="nav-link" href="#Flexible_Images_and_Media">Flexible Images and Media</a></li>
+                <li><a class="nav-link" href="#Navigation_for_Responsive_Websites">Navigation for Responsive Websites</a></li>
+                <li><a class="nav-link" href="#Designing_for_Different_Devices">Designing for Different Devices</a></li>
+                <li><a class="nav-link" href="#Testing_and_Debugging_Responsive_Designs">Testing and Debugging Responsive Designs</a></li>
+                <li><a class="nav-link" href="#Best_Practices_for_Performance">Best Practices for Performance</a></li>
+                <li><a class="nav-link" href="#Accessibility_in_Responsive_Design">Accessibility in Responsive Design</a></li>
+            </ul>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="Introduction_to_Responsive_Web_Design">
+                <header>Introduction to Responsive Web Design</header>
+                    <p>Responsive web design is an approach to designing and coding websites to ensure optimal viewing and interaction across various devices and screen sizes. The goal is to create a seamless user experience, irrespective of the device being used.</p>
+            </section>
+            <section class="main-section" id="Key_Principles_of_Responsive_Design">
+                <header>Key Principles of Responsive Design</header>
+                    <p>Explore the fundamental principles of responsive web design:</p>
+                    
+                    <ul>
+                        <li>
+                            <strong>Fluid Grids:</strong> Use percentage-based widths for flexible layouts.
+                        </li>
+                        <li>
+                            <strong>Flexible Images:</strong> Ensure images scale proportionally within containers.
+                        </li>
+                        <li>
+                            <strong>Media Queries:</strong> Apply styles based on screen characteristics.
+                        </li>
+                        <li>
+                            <strong>Navigation:</strong> Design mobile-friendly navigation patterns.
+                        </li>
+                        <li>
+                            <strong>Testing and Debugging:</strong> Employ tools for effective testing and debugging.
+                        </li>
+                    </ul>    
+                
+            </section>
+            <section class="main-section" id="Using_a_Grid_System_for_Layout">
+                <header>Using a Grid System for Layout</header>
+                    <p>Grid systems help organize content on a page. Learn about using fluid grids that can adjust to different screen widths, ensuring a consistent layout and visual hierarchy across devices.</p>
+                    <article>
+                        Create a simple fluid grid layout using percentage-based widths.
+                        <code>
+                            .container {
+                                width: 90%;
+                                margin: 0 auto;
+                            }
+                            
+                            .column {
+                                width: 30%;
+                                float: left;
+                                margin-right: 2%;
+                            }
+                            
+                        </code>
+                    </article>
+                
+            </section>
+            <section class="main-section" id="Media_Queries_and_Breakpoints">
+                <header>Media Queries and Breakpoints</header>
+                    <p>Media queries enable you to apply specific styles based on characteristics like screen width, height, or device orientation. Breakpoints are the points at which your design adjusts to accommodate different screen sizes.</p>
+                    <article>
+                        Use media queries to apply specific styles based on screen width.
+                        <code>
+                            /* Styles for screens smaller than 600 pixels */
+                                @media only screen and (max-width: 600px) {
+                                    body {
+                                        background-color: lightblue;
+                                    }
+                                }
+
+                                /* Styles for screens between 601 and 1024 pixels */
+                                @media only screen and (min-width: 601px) and (max-width: 1024px) {
+                                    body {
+                                        background-color: lightgreen;
+                                    }
+                                }
+                        </code>
+                    </article>
+                
+            </section>
+            <section class="main-section" id="Flexible_Images_and_Media">
+                <header>Flexible Images and Media</header>
+                    <p>Explore techniques for making images and media elements responsive. This involves using CSS properties like max-width: 100% to ensure that images scale appropriately on various devices.</p>
+                    <article>
+                        Ensure images scale proportionally within their parent container.
+                        <code>
+                            img {
+                                max-width: 100%;
+                                height: auto;
+                            }
+                            
+                        </code>
+                    </article>
+                
+            </section>
+            <section class="main-section" id="Navigation_for_Responsive_Websites">
+                <header>Navigation for Responsive Websites</header>
+                    <p>Designing responsive navigation is crucial. Learn about mobile-friendly navigation patterns like hamburger menus and techniques for optimizing navigation for different screen sizes.</p>
+                    <article>
+                        Implement a basic hamburger menu for mobile navigation.
+                        <code>
+                            .menu-icon {
+                                display: none; /* Hide by default on larger screens */
+                            }
+                            
+                            @media only screen and (max-width: 600px) {
+                                .menu-icon {
+                                    display: block; /* Show on smaller screens */
+                                }
+                            
+                                .mobile-nav {
+                                    display: none; /* Hide navigation by default */
+                                }
+                            }
+                            
+                        </code>
+                    </article>
+                </header>
+            </section>
+            <section class="main-section" id="Designing_for_Different_Devices">
+                <header>Designing for Different Devices</header>
+                    <p>Understand how to create design variations for different devices. This involves considering not just screen size but also touch interactions and other device-specific features.</p>
+                    <article>
+                        Adjust font sizes based on screen width for better readability.
+                        <code>
+                            body {
+                                font-size: 16px;
+                            }
+                            
+                            @media only screen and (max-width: 600px) {
+                                body {
+                                    font-size: 14px;
+                                }
+                            }
+                            
+                        </code>
+                    </article>
+            </section>
+            <section class="main-section" id="Testing_and_Debugging_Responsive_Designs">
+                <header>Testing and Debugging Responsive Designs</header>
+                    <p>Learn effective testing strategies for ensuring your responsive design works well across different browsers and devices. Debugging tools and testing on real devices can be essential for identifying and fixing issues.</p>
+            </section>
+            <section class="main-section" id="Best_Practices_for_Performance">
+                <header>Best Practices for Performance</header>
+                    <p>Explore performance considerations for responsive websites, including optimizing images, minimizing HTTP requests, and using techniques like lazy loading to enhance the site's speed and efficiency.</p>
+            </section>
+            <section class="main-section" id="Accessibility_in_Responsive_Design">
+                <header>Accessibility in Responsive Design</header>
+                    <p>Ensure your responsive design is accessible to users with disabilities. This involves proper semantic HTML, ARIA roles, and testing with assistive technologies to provide an inclusive user experience.</p>
+            </section>
+        </main>
+    </body>
+ </html>
