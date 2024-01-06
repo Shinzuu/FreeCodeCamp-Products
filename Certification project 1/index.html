@@ -1,31 +1,91 @@
 <!DOCTYPE html>
-<html lang="en" charset="UTF-8">
+<html lang="en">
   <head>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f8f8f8;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+      }
+
+      #survey-form {
+        width: 80%;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      .radio-input,
+      .input-checkbox {
+        margin-right: 5px;
+      }
+
+      .submit-button {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .submit-button:hover {
+        background-color: #555;
+      }
+    </style>
   </head>
   <body>
     <header>
-    <h1 id="title">Player Experience Survey</h1>
-    <p id="description">Thank you for help improving our game</p>
+      <h1 id="title">Player Experience Survey</h1>
+      <p id="description">Thank you for helping us improve our game.</p>
     </header>
     <form id="survey-form">
       <div class="form-group">
-        <label for="name" id="name-label">
-          Name: 
-        </label>
+        <label for="name">Name:</label>
         <input required="" id="name" type="text" placeholder="Enter your full name"/>
       </div>
       <div class="form-group">
-        <label for="email" id="email-label">
-          Email: 
-        </label>
+        <label for="email">Email:</label>
         <input required="" id="email" type="email" placeholder="Enter your email" />
       </div>
       <div class="form-group">
-        <label for="number" id="number-label">
-          Age 
-          <span class="clue">(Optional)</span>
-        </label>
+        <label for="number">Age <span class="clue">(Optional)</span></label>
         <input required id="number" type="number" min="13" max="120" placeholder="Enter your age" />
       </div>
       <div class="form-group">
@@ -39,20 +99,18 @@
         </select>
       </div>
       <div class="form-group">
-        <p>Would you want the champ to be buffed or nerfed ?</p>
+        <p>Would you want the champ to be buffed or nerfed?</p>
         <label>
-          <input class="radio-input"  name="balance" value="buffed" checked="" type="radio" >
+          <input class="radio-input"  name="balance" value="buffed" checked="" type="radio">
           Buffed
         </label>
         <label>
-          <input class="radio-input"  name="balance" value="nerfed" type="radio" >
+          <input class="radio-input"  name="balance" value="nerfed" type="radio">
           Nerfed
         </label>
       </div>
       <div class="form-group">
-        <p>Which ability/ies would you like to be changed
-        <span class="clue">(Check all that applies)</span>
-        </p>
+        <p>Which ability/ies would you like to be changed <span class="clue">(Check all that applies)</span></p>
         <label>
           <input class="input-checkbox" name="ability" value="passive" type="checkbox">
           Passive
@@ -75,10 +133,8 @@
         </label>
       </div>
       <div class="form-group">
-          <p>Please add additional comments/suggestuions 
-          <span class="class">(Optional)</span>
-          </p>
-        <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..." ></textarea>
+        <p>Please add additional comments/suggestions <span class="clue">(Optional)</span></p>
+        <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
       </div>
       <div class="form-group">
         <button id="submit" class="submit-button" type="submit">Submit</button>

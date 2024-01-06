@@ -1,78 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="styles.css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dyson Gen5outsize Vacuum</title>
-    </head>
-        <header id="header">
-            <div class="header">
-                <img id="header-img" src="Dyson_logo.svg" alt="dyson logo image">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dyson Gen5outsize Vacuum</title>
+</head>
+<body>
+    <header id="header">
+        <div class="header">
+            <img id="header-img" src="Dyson_logo.svg" alt="dyson logo image">
+        </div>
+        <nav id="nav-bar">
+            <ul>
+                <li>
+                    <a class="nav-link" href="#features">Features</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#how-it-works">How It Works</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#pricing">Pricing</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Dyson Gen5outsize Vacuum</h1>
+                <p>The most powerful cordless vacuum for bigger cleans</p>
             </div>
-            <nav id="nav-bar">
-                <ul>
-                    <li>
-                        <a class="nav-link" href="#features">Features</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#how-it-works">How It Works</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#pricing">Pricing</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+        </section>
 
-    <body>
-        <div class="form">
-            <form id="form" action="https://www.freecodecamp.com/email-submit">
-                <input type="email" name="email" id="email" placeholder="Enter email">
-                <input type="submit" id="submit">
+        <section id="form">
+            <form id="email-form" action="https://www.freecodecamp.com/email-submit">
+                <input type="email" name="email" id="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
             </form>
-        </div>
-        <div class="vid">
-            <iframe id="video" width="600" height="420"
-            src="https://www.youtube.com/watch?v=m7lNDlG4Tpw?autoplay=1&mute=1">
-            </iframe> 
-        </div>
-        <div class="container">
-            <section id="features">
-                <h1>About this item</h1>
+        </section>
 
-                <h2>Dyson's most powerful cordless vacuum for bigger cleans.</h2>
-                <h4>¹ With HEPA filtration.Over 115% more power.</h4>
-                <h4>² 140 minutes of run time.</h4>
-                <h4>³ The power of a corded vacuum in a cordless format.150% larger bin and 25% wider cleaner head. Clean longer before emptying the bin and cover more floor with each sweep.</h4>
-                <h4>⁴ Converts to a handheld vacuum.
-                Intelligently adapts power based on debris and floor type detected. Bars on the screen grow and shrink in real time according to the volume of particles removed as you clean – showing you when to move to another area.⁵
-                The LCD screen displays a summary of how much dust you have picked up at the end of each clean.</h4>
-                <h4>⁵ Also displays power mode, maintenance alerts, and remaining run time to the second.
-                Reveals 2x more invisible dust on hard floors.</h4>
+        <section id="video">
+            <iframe id="video-frame" width="600" height="420" src="https://www.youtube.com/embed/m7lNDlG4Tpw?autoplay=1&mute=1" allowfullscreen></iframe>
+        </section>
 
-            </section>
-            <section id="how-it-works">
-                <p>2+ hours of cordless run time³ for bigger cleans
+        <section id="features">
+            <h2>About this item</h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h3>Dyson's most powerful cordless vacuum</h3>
+                    <p>Over 115% more power with HEPA filtration.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>140 minutes of run time</h3>
+                    <p>Long-lasting cordless cleaning for your entire home.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Converts to a handheld vacuum</h3>
+                    <p>Intelligently adapts power based on debris and floor type detected.</p>
+                </div>
+            </div>
+        </section>
 
-                With up to 140 minutes of cordless run time,³ 150% bigger bin, and 25% wider cleaner head,⁴ the Dyson Gen5outsize vacuum is engineered to clean your whole home faster.
-                gen5outsize
+        <section id="how-it-works">
+            <h2>How It Works</h2>
+            <p>With up to 140 minutes of cordless run time, the Dyson Gen5outsize vacuum is engineered to clean your whole home faster. Our fastest, most energy-efficient motor spins at 135,000rpm, generating Dyson’s most powerful suction and deepest ever clean. Choose between Auto, Eco, and Boost mode for complete control of your clean.</p>
+        </section>
 
-            
-                Our fastest, most energy-efficient motor yet
+        <section id="pricing">
+            <div class="pricing-info">
+                <p>Rating: 4.5 · 194 reviews · <span>$1,000.00</span> · In stock</p>
+            </div>
+        </section>
 
-                Spins at 135,000rpm generating Dyson’s most powerful suction – and deepest ever clean.¹ With pioneering Radial Root Cyclone technology for no loss of suction.​
-                gen5outsize
-
-                Choose between 3 cleaning modes
-
-                Choose between Auto, Eco, and Boost mode for complete control of your clean. The LCD screen also displays remaining run time and maintenance alerts.</p>
-
-            </section>
-            <section id="pricing">
-                <i>Rating: 4.5 · 194 reviews · <B>$1,000.00</B> · In stock</i>
-            </section>
-            <footer> just a footer :) </footer>
-        </div>
-    </body>
+        <footer>
+            <p>&copy; 2024 Dyson. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
 </html>
